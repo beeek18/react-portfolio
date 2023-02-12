@@ -13,8 +13,8 @@ const Projects = () => {
     setIsLoading(true)
 
     axios.get("https://63d0153a10982404378ccc77.mockapi.io/portfolio")
-      .then((res) => {
-        setProjects(res.data);
+      .then(({ data }) => {
+        setProjects(data);
       })
       .catch((err) => {
         console.warn(err);
