@@ -32,7 +32,7 @@ const FullProject = () => {
   return (
     <main className="section" >
       <div className="container">
-        {isLoading ? <SkeletonFullProject /> : <div className="project-details">
+        {isLoading ? <SkeletonFullProject className="container" /> : <div className="project-details">
           <h1 className="title-1">{project?.title}</h1>
           <img src={project?.imgBig} alt="React Sneakers V2" className="project-details__cover" />
           <div className="project-details__desc">

@@ -1,12 +1,12 @@
 <h1>React Portfolio 🧑🏻‍💻
 
 <h4>
+<li>Axios
 <li>Navigation 
 <li>CSS Variables
-<li>React Content Loader
+<li>React Content Loader (Skeleton)
+<li>Components and Pages
 <li>Mobile adaptation
 <li>Dark theme. Switch layout
 <li>A guide to system settings for a dark theme
-<li>Fetch
 <li>LocalStorage to save dark theme
-<li>Components and Pages
