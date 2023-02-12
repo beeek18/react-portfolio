@@ -1,27 +1,23 @@
 import React from 'react';
-import { useLocalStorage } from '../../utils/useLocalStorage';
 
+import { useLocalStorage } from '../../utils/useLocalStorage';
+import { detectDarkMode } from '../../utils/detectDarkMode';
 
 import './style.css';
 
 import sun from './sun.svg'
 import moon from './moon.svg'
-import { detectDarkMode } from '../../utils/detectDarkMode';
-
-
 
 
 export const BtnDarkMode = () => {
   const [darkMode, setDarkMode] = useLocalStorage('darkMode', detectDarkMode());
 
   React.useEffect(() => {
-
     if (darkMode === 'dark') {
       document.body.classList.add('dark')
     } else {
       document.body.classList.remove('dark')
     }
-
 
   }, [darkMode])
 
@@ -31,6 +27,7 @@ export const BtnDarkMode = () => {
         const newColorScheme = event.matches ? 'dark' : 'light';
         setDarkMode(newColorScheme)
       })
+
   }, [setDarkMode]);
 
   const tooggleDarkMode = () => {
@@ -40,8 +37,10 @@ export const BtnDarkMode = () => {
   const btnNormal = "dark-mode-btn";
   const btnActive = "dark-mode-btn dark-mode-btn--active";
 
+  const checkBtn = darkMode === 'dark' ? btnActive : btnNormal;
+
   return (
-    <button className={darkMode === 'dark' ? btnActive : btnNormal} onClick={tooggleDarkMode}>
+    <button className={checkBtn} onClick={tooggleDarkMode}>
       <img src={sun} alt="Light mode" className="dark-mode-btn__icon" />
       <img src={moon} alt="Dark mode" className="dark-mode-btn__icon" />
     </button>

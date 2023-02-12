@@ -1,6 +1,5 @@
 import './style.css';
 
-
 import gitHub from "../../img/icons/gitHub.svg"
 import vk from "../../img/icons/vk.svg"
 import instagram from "../../img/icons/instagram.svg"

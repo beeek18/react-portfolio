@@ -38,6 +38,7 @@
   font-weight: 500;
   font-family: "Poppins", sans-serif;
 }
+
 .nav-list__link {
   color: var(--header-text);
   transition: opacity 0.2s ease-in;
