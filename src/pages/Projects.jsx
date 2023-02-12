@@ -12,12 +12,13 @@ const Projects = () => {
   React.useEffect(() => {
     setIsLoading(true)
 
-    axios.get("https://63d0153a10982404378ccc77.mockapi.io/portfolio")
+    axios
+      .get("https://63d0153a10982404378ccc77.mockapi.io/portfolio")
       .then(({ data }) => {
         setProjects(data);
       })
       .catch((err) => {
-        console.warn(err);
+        console.log(err);
         alert("Error getting users");
       })
       .finally(() => setIsLoading(false))
