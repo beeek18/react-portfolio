@@ -1,4 +1,4 @@
-<h1>React Portfolio 🧑🏻‍💻
+<h1>Portfolio 🧑🏻‍💻
 
 <h4>
 <li>Axios
